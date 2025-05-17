@@ -1,14 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://kxu46n1py15p"]
+[gd_scene load_steps=8 format=3 uid="uid://kxu46n1py15p"]
 
 [ext_resource type="Script" uid="uid://de2atl54xffrx" path="res://player.gd" id="1_4flbx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sh265"]
-friction = 0.0
+friction = 0.2
 absorbent = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4flbx"]
+friction = 0.6
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sh265"]
 size = Vector3(1, 1, 2)
@@ -19,6 +22,7 @@ size = Vector3(1, 1, 2)
 [node name="Player" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_sh265")
 script = ExtResource("1_4flbx")
 
@@ -35,6 +39,7 @@ mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="SkiAngle" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+physics_material_override = SubResource("PhysicsMaterial_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SkiAngle"]
 shape = SubResource("BoxShape3D_sh265")

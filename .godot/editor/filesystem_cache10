@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1747513233
+icon.svg::CompressedTexture2D::557613408307740219::1747374550::1747513234::1::::<><><>0<>0<>764c1a0e3ccf3e1089d2d82c08869df6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::2219539349548659346::1747379000::0::1::::<><><>0<>0<><>::uid://d2nb3xklnglyv::::res://Texturelabs_Soil_147thumbnail.jpg<>uid://bw2c7naewpsa5::::res://snow_texture.png<>uid://kxu46n1py15p::::res://player.tscn
+player.gd::GDScript::7495790180524789669::1747378720::0::1::::<>RigidBody3D<><>0<>0<><>::
+player.tscn::PackedScene::750636902110922275::1747379000::0::1::::<><><>0<>0<><>::uid://de2atl54xffrx::::res://player.gd
+README.md::TextFile::-1::1747513129::0::1::::<><><>0<>0<><>::
+snow_normal.png::CompressedTexture2D::863454906908750474::1747374770::1747513234::1::::<><><>0<>0<>2102ff7f91229e04f14146d3d83bf8fc<>res://.godot/imported/snow_normal.png-909518add3bb8b25e6bb060235f39452.ctex::
+snow_texture.png::CompressedTexture2D::3986492705495220414::1747374762::1747513234::1::::<><><>0<>0<>a6f24d6a6e25fc09c62ec2bc48a9a3a1<>res://.godot/imported/snow_texture.png-5156e4102028460211ee874764b093d3.s3tc.ctex::
+Texturelabs_Soil_147thumbnail.jpg::CompressedTexture2D::9081309683333567057::1747374966::1747513234::1::::<><><>0<>0<>a426e9f600e7875b4471162bc1bdf129<>res://.godot/imported/Texturelabs_Soil_147thumbnail.jpg-f9ed19c714d5ae23fb6f99b56034c818.s3tc.ctex::

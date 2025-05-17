@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://kxu46n1py15p" path="res://player.tscn" id="3_h2yge"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h2yge"]
-friction = 0.0
+friction = 0.2
 absorbent = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
