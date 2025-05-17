@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://6vfqvcee1qfy"]
+
+[ext_resource type="Texture2D" uid="uid://d2nb3xklnglyv" path="res://Texturelabs_Soil_147thumbnail.jpg" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bw2c7naewpsa5" path="res://snow_texture.png" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://kxu46n1py15p" path="res://player.tscn" id="3_h2yge"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h2yge"]
+friction = 0.0
+absorbent = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_texture = ExtResource("1_0xm2m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_texture = ExtResource("2_h2yge")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_lquwl")
+size = Vector3(100, 1, 100)
+
+[sub_resource type="Environment" id="Environment_h2yge"]
+ambient_light_color = Color(0.986752, 0.986752, 0.986752, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_1bvp3")
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="Player" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h2yge")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 30, 0)
